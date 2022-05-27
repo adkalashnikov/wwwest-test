@@ -1,0 +1,10 @@
+dist
+node_modules/
+_arc/
+.idea
+.DS_Store
+.Saved/
+package-lock.json
+twentytwenty/
+twentytwentyone/
+twentytwentytwo/

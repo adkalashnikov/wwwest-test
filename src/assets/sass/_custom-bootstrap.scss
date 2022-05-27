@@ -1,0 +1,28 @@
+$body-bg: $bodyBg !default;
+$font-weight-base: $fontWeight !default;
+$line-height-base: $lineHeight !default;
+$font-family-sans-serif:      $fontFamilyR, sans-serif !default;
+$font-family-monospace:       $fontFamilyR, monospace !default;
+$font-family-base:            $fontFamilyR !default;
+$font-size-base:              15px !default;
+$font-size-lg:                15px !default;
+$font-size-sm:                15px !default;
+
+$grid-breakpoints: (
+    xs: $screen-xs,
+    sm: $screen-sm,
+    md: $screen-md,
+    lg: $screen-lg,
+    xl: $screen-xl
+) !default;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1230px
+) !default;
+
+$nav-link-height: auto !default;
+$navbar-brand-padding-y: 0 !default;
+$custom-control-indicator-size: 15 !default;

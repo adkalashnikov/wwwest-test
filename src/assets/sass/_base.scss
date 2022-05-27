@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $bodyBg;
+    color: $textColor;
+    font-family: $fontFamilyR;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-style: normal;
+    line-height: $lineHeight;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+section {
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.icon {
+    display: inline-block;
+}

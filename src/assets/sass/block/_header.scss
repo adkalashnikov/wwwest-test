@@ -1,0 +1,102 @@
+.page-header {
+    z-index: $page-header-z;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 18px 0;
+    transition: all .5s ease 0s;
+    min-height: 60px;
+
+    @include min-w($screen-lg) {
+        padding: 28px 0;
+    }
+
+    &.is-sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .06);
+        background-color: #f38181;
+
+        @include min-w($screen-lg) {
+            padding: 20px 0;
+        }
+    }
+
+    .navbar {
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+    }
+}
+
+.page-header-nav {
+    font-weight: 500;
+    line-height: 18px;
+
+    @include min-w($screen-md) {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @include min-w($screen-lg) {
+            margin-left: 50px;
+        }
+    }
+
+    a {
+        color: #ffffff;
+        padding: 4px 0;
+        display: block;
+        transition: color .3s, border-bottom-color .3s;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        border-bottom: 3px solid transparent;
+        text-transform: uppercase;
+
+        &:hover {
+            border-bottom-color: #fce38a;
+            color: #fce38a;
+            text-decoration: none;
+        }
+    }
+
+    li {
+        @include min-w($screen-md) {
+            margin-right: 12px;
+        }
+
+        @include min-w($screen-lg) {
+            margin-right: 32px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.current-menu-item {
+            a {
+                border-bottom-color: #fce38a;
+                color: #fce38a;
+            }
+        }
+    }
+}
