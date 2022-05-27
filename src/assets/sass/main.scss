@@ -3,7 +3,6 @@
 @import 'functions';
 @import 'mixins';
 @import 'base';
-@import 'typography';
 
 // Bootstrap
 @import '~bootstrap/scss/functions';
@@ -17,6 +16,7 @@
 @import '~bootstrap/scss/grid';
 @import '~bootstrap/scss/navbar';
 @import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/utilities';
 // /Bootstrap
 
 @import 'wp-classes';
@@ -24,5 +24,3 @@
 @import 'elements/buttons';
 @import 'block/header';
 @import 'block/footer';
-
-@import 'pages/home';
