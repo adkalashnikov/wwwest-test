@@ -1,4 +1,5 @@
 import '@scss/entryPage/home.scss';
+import initSwiper from '@js/components/carousel';
 
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', () => {
@@ -22,4 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.hash = '.';
         }, 1500);
     }, false);
+
+    initSwiper();
 });

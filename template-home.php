@@ -9,7 +9,7 @@
 	<main id="main" class="page-main" role="main">
         <?php
         $args = [
-            'prefix' => 'hp_hero_', //REQUIRED VALUE
+            'prefix' => 'hp_slider_', //REQUIRED VALUE
             'section_class' => '',
             'section_id' => '',
         ];

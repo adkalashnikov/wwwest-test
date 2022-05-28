@@ -1,10 +1,9 @@
 import 'bootstrap';
-const body = document.querySelector('body');
-import initSwiper from '@js/components/carousel';
+const body = document.querySelector('body'),
+    header = document.querySelector('.js-h-sticky');
 
 //Sticky header
 document.addEventListener('scroll', () => {
-    const header = document.querySelector('.js-h-sticky');
     if(!header) return;
     let sticky = header.offsetTop;
 
@@ -17,7 +16,3 @@ document.addEventListener('scroll', () => {
     }
 });
 // /Sticky header
-
-document.addEventListener('DOMContentLoaded', () => {
-    initSwiper();
-});
