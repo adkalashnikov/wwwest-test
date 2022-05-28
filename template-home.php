@@ -16,9 +16,10 @@
         get_template_part('sections/s', 'hero', $args);
         ?>
 
+        <?php get_template_part('sections/s', 'latest-blog', $args); ?>
+
 
         <div>
-            <br><br><br><br><br><br><br><br>
             <div class="container">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum facere officia reprehenderit velit. At aut
                     dolor dolorum eos magnam modi natus nulla, odio voluptatem voluptates? Amet laboriosam molestias reiciendis

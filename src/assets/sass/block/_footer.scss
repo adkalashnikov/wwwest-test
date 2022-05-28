@@ -2,9 +2,11 @@
     position: relative;
     flex: 0 0 auto;
     background-color: #f8f8f8;
-    border-top: 1px solid #e5e5e5;
-    padding: 24px 22px 22px;
-    text-align: center;
+
+    &__inner {
+        padding: 24px 22px 22px;
+        text-align: center;
+    }
 
     .copyright {
         margin: 0;
