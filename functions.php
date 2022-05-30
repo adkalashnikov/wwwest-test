@@ -107,6 +107,15 @@ function theme_scripts() {
         wp_enqueue_script( 'js-single-team' );
         wp_enqueue_style( 'css-single-team' );
     }
+
+    // Blog page
+    wp_register_style( 'css-blog', $uri . '/dist/css/blog.css', array('theme-main-style'), null, 'all' );
+    wp_register_script( 'js-blog', $uri . '/dist/js/blog.js', array('jquery', 'theme-script'), null, true );
+
+    if ( is_page_template('template-blog.php') ) {
+        wp_enqueue_script( 'js-blog' );
+        wp_enqueue_style( 'css-blog' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

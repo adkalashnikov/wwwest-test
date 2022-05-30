@@ -50,7 +50,7 @@ $s_title  = get_field($clone_prefix . 'section_title');
                     $max_page = intval($query->max_num_pages);
                     if(1 < $max_page) { ?>
                         <div class="row justify-content-center pt-5">
-                            <a href="#" class="btn">Show More</a>
+                            <a href="<?php echo get_permalink(get_page_by_path('blog')); ?>" class="btn">Show More</a>
                         </div>
                     <?php
                     }

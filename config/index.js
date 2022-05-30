@@ -5,7 +5,8 @@ module.exports = {
         'bundle': path.resolve(__dirname, '../src/main.js'),
         'customizer': path.resolve(__dirname, '../src/customizer.js'),
         'home': path.resolve(__dirname, '../src/entryPagePoints/home.js'),
-        'single-team': path.resolve(__dirname, '../src/entryPagePoints/single-team.js')
+        'single-team': path.resolve(__dirname, '../src/entryPagePoints/single-team.js'),
+        'blog': path.resolve(__dirname, '../src/entryPagePoints/blog.js')
     },
     devServer: require('./devServer'),
     alias: require('./aliases'),

@@ -99,3 +99,18 @@ function tm_cards($atts) {
     return $content;
 }
 add_shortcode("tm_cards", "tm_cards");
+
+
+// Custom pagination
+function custom_paginated_links($query) {
+    $currentPage = max(1, get_query_var('paged', 1));
+    $pages = range(1, max(1, $query->max_num_pages));
+
+    return array_map(function($page) use ($currentPage) {
+        return (object) array(
+            "isCurrent" => $page == $currentPage,
+            "page" => $page,
+            "url" => get_pagenum_link($page)
+        );
+    }, $pages);
+}
