@@ -16,7 +16,14 @@
         get_template_part('sections/s', 'hero', $args);
         ?>
 
-        <?php get_template_part('sections/s', 'latest-blog', $args); ?>
+        <?php
+        $args = [
+            'prefix' => 'hp_lb_', //REQUIRED VALUE
+            'section_class' => '',
+            'section_id' => '',
+        ];
+        get_template_part('sections/s', 'latest-blog', $args);
+        ?>
 
 
         <div>
