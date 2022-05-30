@@ -98,6 +98,15 @@ function theme_scripts() {
         wp_enqueue_script( 'js-home' );
         wp_enqueue_style( 'css-home' );
     }
+
+    // Single Team
+    wp_register_style( 'css-single-team', $uri . '/dist/css/single-team.css', array('theme-main-style'), null, 'all' );
+    wp_register_script( 'js-single-team', $uri . '/dist/js/single-team.js', array('jquery', 'theme-script'), null, 'all' );
+
+    if (is_singular('team')) {
+        wp_enqueue_script( 'js-single-team' );
+        wp_enqueue_style( 'css-single-team' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

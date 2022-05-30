@@ -1,0 +1,18 @@
+.single-team {
+    .team {
+        &__item-socials {
+            position: static;
+            left: auto;
+            top: auto;
+            width: auto;
+            z-index: 1;
+            opacity: 1;
+            text-align: center;
+            color: #fff;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 45px;
+        }
+    }
+}
