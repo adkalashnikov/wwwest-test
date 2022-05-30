@@ -9,7 +9,9 @@
 @import '~@scss/sections/s-hero';
 @import '~@scss/sections/s-latest-blog';
 @import '~@scss/sections/s-what-we-do';
+@import '~@scss/sections/s-our-team';
 
-.s-wd {
+.s-wd,
+.s-ot {
     padding-top: 0;
 }

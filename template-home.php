@@ -32,5 +32,14 @@
         ];
         get_template_part('sections/s', 'what-we-do', $args);
         ?>
+
+        <?php
+        $args = [
+            'prefix' => 'hp_ot_', //REQUIRED VALUE
+            'section_class' => '',
+            'section_id' => '',
+        ];
+        get_template_part('sections/s', 'our-team', $args);
+        ?>
 	</main>
 <?php get_footer(); ?>
