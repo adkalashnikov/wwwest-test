@@ -16,7 +16,6 @@ if ( $args['section_id'] ) {
 $subheading  = get_field($clone_prefix . 'subheading');
 $s_title  = get_field($clone_prefix . 'section_title');
 ?>
-
 <section class="<?php echo $section_class; ?>" <?php if($section_id) echo 'id="'.$section_id.'"'; ?>>
     <div class="<?php echo $section_class; ?>__inner">
         <div class="container">

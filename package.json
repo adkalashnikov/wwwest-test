@@ -57,6 +57,7 @@
     "bootstrap": "^4.6.0",
     "file-loader": "^3.0.1",
     "popper.js": "^1.16.1",
+    "simplebar": "^5.3.8",
     "swiper": "^8.1.6"
   },
   "browserslist": [
