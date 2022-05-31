@@ -35,7 +35,7 @@ $accordion  = get_field($clone_prefix . 'accordion');
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 <?php echo $section_class; ?>__col-1">
                     <?php if($s_image_url) { ?>
                         <div class="<?php echo $section_class; ?>__image-wrapper">
                             <img src="<?php echo $s_image_url; ?>" alt="image">
@@ -43,7 +43,7 @@ $accordion  = get_field($clone_prefix . 'accordion');
                     <?php } ?>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6 <?php echo $section_class; ?>__col-2">
                     <?php if($accordion) {
                         $i = 0;
                         ?>

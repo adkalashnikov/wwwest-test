@@ -10,7 +10,36 @@
     min-height: 60px;
 
     @include min-w($screen-lg) {
-        padding: 28px 0;
+        padding: 30px 0 28px;
+    }
+
+    .navbar {
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+
+        @include min-w($screen-lg) {
+            transform: translateY(-8px);
+        }
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0;
+
+        @include min-w($screen-lg) {
+            transform: translateX(22px);
+        }
     }
 
     &.is-sticky {
@@ -25,27 +54,12 @@
         @include min-w($screen-lg) {
             padding: 20px 0;
         }
-    }
 
-    .navbar {
-        padding: 0;
-        justify-content: space-between;
-    }
-
-    .navbar-brand {
-        padding: 0;
-        color: #ffffff;
-        font-size: 30px;
-        font-weight: bold;
-        line-height: 1;
-    }
-
-    .navbar-toggler {
-        margin-left: auto;
-    }
-
-    .navbar-collapse {
-        flex-grow: 0;
+        .navbar-brand {
+            @include min-w($screen-lg) {
+                transform: translateY(0);
+            }
+        }
     }
 }
 
@@ -99,7 +113,7 @@
 
         @include min-w($screen-lg) {
             margin-bottom: 0;
-            margin-right: 32px;
+            margin-left: 54px;
         }
 
         &:last-child {

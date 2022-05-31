@@ -21,7 +21,7 @@
 
         @include min-w($screen-md) {
             font-size: 24px;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
     }
 
@@ -40,7 +40,7 @@
         }
 
         @include min-w($screen-xl) {
-            margin-bottom: 42px;
+            margin-bottom: 38px;
         }
     }
 
@@ -51,7 +51,7 @@
         margin-bottom: 30px;
 
         @include min-w($screen-lg) {
-            margin-bottom: 47px;
+            margin-bottom: 40px;
         }
     }
 
@@ -65,7 +65,7 @@
         margin-bottom: 30px;
 
         @include min-w($screen-lg) {
-            margin-bottom: 92px;
+            margin-bottom: 89px;
         }
     }
 }

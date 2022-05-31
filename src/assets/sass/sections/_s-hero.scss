@@ -11,11 +11,15 @@
 
     @include min-w($screen-md) {
         padding-top: 120px;
-        padding-bottom: 28px;
+        padding-bottom: 22px;
     }
 
     @include min-w($screen-lg) {
         padding-top: 150px;
+    }
+
+    @include min-w($screen-xl) {
+        padding-top: 205px;
     }
 
     &:before {
@@ -100,7 +104,7 @@
             }
 
             @include min-w($screen-xl) {
-                padding-top: 25px;
+                padding-top: 19px;
             }
 
             &:hover {
@@ -142,11 +146,11 @@
 
         @include min-w($screen-lg) {
             font-size: 55px;
+            margin-bottom: 21px;
         }
 
         @include min-w($screen-xl) {
             font-size: 72px;
-            margin-bottom: 42px;
         }
     }
 
@@ -182,7 +186,7 @@
 
         @include min-w($screen-xl) {
             font-size: 150px;
-            margin-bottom: 70px;
+            margin-bottom: 57px;
         }
     }
 
