@@ -62,37 +62,43 @@ function create_post_type() {
 //  [tm_cards posts_qty='3']
 function tm_cards($atts) {
     $a = shortcode_atts( array(
-        'posts_qty' => 3
+        'posts_qty' => 3,
+        'show_more' => true
     ), $atts );
+
+    if($a['posts_qty'] > 3) {
+        $a['posts_qty'] = 3;
+    }
 
     $content = '';
 
     // Start the output buffer
     ob_start();
-    ?>
-    <div class="dbl dbl__grid-wrapper">
-        <?php
-        $args = array(
-            'post_type'      => 'team',
-            'post_status'    => 'publish',
-            'posts_per_page' => $a['posts_qty']
-        );
-        $query = new WP_Query($args);
-        if ( $query->have_posts() ) { ?>
-            <div class="row justify-content-center">
-                <?php
-                while ( $query->have_posts() ) {
-                    $query->the_post(); ?>
-                    <?php get_template_part('template-parts/card', 'team'); ?>
-                <?php } ?>
-            </div>
+    $args = array(
+        'post_type'      => 'team',
+        'post_status'    => 'publish',
+        'posts_per_page' => $a['posts_qty']
+    );
+    $query = new WP_Query($args);
+    if ( $query->have_posts() ) { ?>
+        <div class="row justify-content-center">
             <?php
-            wp_reset_postdata();
-        }
-        ?>
-    </div>
+            while ( $query->have_posts() ) {
+                $query->the_post(); ?>
+                <?php get_template_part('template-parts/card', 'team'); ?>
+            <?php } ?>
+        </div>
+        <?php
+        wp_reset_postdata();
+    }
 
-    <?php
+    if($a['show_more'] == 'true') { ?>
+        <div class="row justify-content-center pt-5">
+            <a href="<?php echo get_post_type_archive_link('team'); ?>" class="btn">Show More</a>
+        </div>
+        <?php
+    }
+
     $content = ob_get_contents();
     ob_end_clean();
 
