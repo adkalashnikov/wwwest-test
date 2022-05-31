@@ -12,6 +12,9 @@
                     <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
                         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">MoGo</a>
 
+
+
+
                         <button class="navbar-toggler" type="button"
                                 data-toggle="collapse"
                                 data-target="#h-navbar"
@@ -28,6 +31,18 @@
                                     'menu_class' => 'page-header-nav nav navbar-nav',
                                     'container' => false )
                             ); ?>
+
+                            <ul class="nav navbar-nav page-header-nav-2">
+                                <li>
+                                    <a href="#"><?php get_template_part( 'include/svg/ic-cart' ); ?></a>
+                                </li>
+
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#search-modal">
+                                        <?php get_template_part( 'include/svg/ic-search' ); ?>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </nav>
                 </div>

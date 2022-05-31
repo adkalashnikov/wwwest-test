@@ -1,19 +1,16 @@
 <?php get_header(); ?>
 
-	<main id="main" class="page-main" role="main">
+<main id="main" class="site-main default-page" role="main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-md-8 mt-5 mb-5">
+                <header class="default-page__top">
+                    <h1 class="default-page__title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'theme' ); ?></h1>
+                </header>
+            </div>
+        </div>
+    </div>
+</main>
 
-		<section class="error-404 not-found">
-
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'theme' ); ?></h1>
-			</header>
-
-			<div class="page-content">
-				<?php get_search_form(); ?>
-			</div>
-
-		</section>
-
-	</main>
 
 <?php get_footer(); ?>
