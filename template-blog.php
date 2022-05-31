@@ -40,12 +40,12 @@ wp_reset_postdata();
 <?php get_header(); ?>
 
 <main id="main" class="page-main" role="main">
-    <section class="s-lbl">
+    <section class="default-page">
         <div class="container">
-            <div class="s-lbl__top">
-                <?php the_title('<h1 class="s-lbl__title">', '</h1>'); ?>
+            <div class="default-page__top">
+                <?php the_title('<h1 class="default-page__title">', '</h1>'); ?>
 
-                <div class="s-lbl__title-decor"></div>
+                <div class="default-page__title-decor"></div>
             </div>
 
             <div class="s-lbl__posts">

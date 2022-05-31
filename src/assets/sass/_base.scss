@@ -48,3 +48,61 @@ section {
 .icon {
     display: inline-block;
 }
+
+.default-page {
+    padding: 100px 0 60px;
+
+    @include min-w($screen-lg) {
+        padding: 130px 0 116px;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__subheading {
+        font-family: $fontFamilyK;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 1;
+        color: #333333;
+        margin-bottom: 15px;
+
+        @include min-w($screen-md) {
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+    }
+
+    &__title {
+        font-family: $fontFamilyM;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 15px;
+
+        @include min-w($screen-md) {
+            margin-bottom: 30px;
+        }
+
+        @include min-w($screen-xl) {
+            margin-bottom: 42px;
+        }
+    }
+
+    &__title-decor {
+        width: 60px;
+        height: 3px;
+        background-color: #f38181;
+        margin-bottom: 30px;
+
+        @include min-w($screen-lg) {
+            margin-bottom: 47px;
+        }
+    }
+}

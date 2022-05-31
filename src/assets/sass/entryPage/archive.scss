@@ -1,0 +1,10 @@
+@import '../variables';
+@import '../mixins';
+
+.team {
+    &__item {
+        @include min-w($screen-md) {
+            margin-bottom: 30px;
+        }
+    }
+}

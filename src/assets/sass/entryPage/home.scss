@@ -11,6 +11,16 @@
 @import '~@scss/sections/s-what-we-do';
 @import '~@scss/sections/s-our-team';
 
+.page-header {
+    @include min-w($screen-lg) {
+        background: transparent;
+    }
+
+    &.is-sticky {
+        background-color: #f38181;
+    }
+}
+
 .s-wd,
 .s-ot {
     padding-top: 0;

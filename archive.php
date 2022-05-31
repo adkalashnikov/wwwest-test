@@ -21,79 +21,86 @@ if (is_category() || is_tax()) {
 
 <?php get_header(); ?>
 
-    <main id="main" class="page-main" role="main">
+<main id="main" class="page-main" role="main">
+    <section class="default-page">
         <div class="container">
-            <h1><?php echo $page_title; ?></h1>
-        </div>
+            <div class="default-page__top">
+                <h1 class="default-page__title"><?php echo $page_title; ?></h1>
 
-
-        <section class="s2">
-            <div class="page-container">
-                <div class="s2__inner">
-                    <div class="s2__grid">
-                        <?php
-                        $args = array(
-                            'posts_per_page' => 9,
-                            'paged'          => $paged,
-                            'post_type'      => $post_type,
-                            'post_status'    => 'publish'
-                        );
-
-                        if (is_category() || is_tax()) {
-                            $args = array(
-                                'posts_per_page' => 9,
-                                'paged'          => $paged,
-                                'post_type'      => $post_type,
-                                'post_status'    => 'publish',
-                                'tax_query'      => array(
-                                    array(
-                                        'taxonomy' => $current_term_tax,
-                                        'field'    => 'id',
-                                        'terms'    => $current_term_id
-                                    )
-                                )
-                            );
-                        }
-
-                        $query = new WP_Query( $args );
-                        if ( $query->have_posts() ) { ?>
-                            <div class="row justify-content-center">
-                            <?php
-                            while ( $query->have_posts() ) {
-                                $query->the_post();
-
-                                get_template_part('template-parts/card', 'posts');
-                            } ?>
-                            </div>
-                        <?php
-                        } else { ?>
-                            <div class="no__text"><?php _e( 'Nothing Found', 'theme' ); ?></div>
-                        <?php }
-                        wp_reset_postdata();
-                        ?>
-                    </div>
-
-                    <?php if ($query->max_num_pages > 1) : // custom pagination  ?>
-                        <nav class="pagination">
-                            <?php
-                            $orig_query = $wp_query; // fix for pagination to work
-                            $wp_query = $query;
-                            $big = 999999999;
-                            echo paginate_links(array(
-                                'base'     => str_replace($big, '%#%', get_pagenum_link($big)),
-                                'format'   => '?paged=%#%',
-                                'current'  => max(1, $paged),
-                                'total'    => $wp_query->max_num_pages,
-                                'type'     => 'list',
-                                'mid_size' => 4,
-                            ));
-                            $wp_query = $orig_query; // fix for pagination to work
-                            ?>
-                        </nav>
-                    <?php endif; ?>
-                </div>
+                <div class="default-page__title-decor"></div>
             </div>
-        </section>
-    </main>
+
+            <?php
+            $args = array(
+                'posts_per_page' => 9,
+                'paged'          => $paged,
+                'post_type'      => $post_type,
+                'post_status'    => 'publish'
+            );
+
+            if (is_category() || is_tax()) {
+                $args = array(
+                    'posts_per_page' => 9,
+                    'paged'          => $paged,
+                    'post_type'      => $post_type,
+                    'post_status'    => 'publish',
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => $current_term_tax,
+                            'field'    => 'id',
+                            'terms'    => $current_term_id
+                        )
+                    )
+                );
+            }
+
+            $query = new WP_Query( $args );
+            if ($query->have_posts()) { ?>
+                <div class="row">
+                <?php
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+
+                    if($post_type == 'team') {
+                        get_template_part('template-parts/card', 'team');
+                    } else {
+                        get_template_part('template-parts/card', 'posts');
+                    }
+                } ?>
+                </div>
+            <?php
+            } else { ?>
+                <div class="no__text"><?php _e( 'Nothing Found', 'theme' ); ?></div>
+            <?php }
+            wp_reset_postdata();
+            ?>
+
+            <?php if ($query->max_num_pages > 1) { // custom pagination  ?>
+                <nav class="nav justify-center pt-5">
+                    <?php
+                    $orig_query = $wp_query; // fix for pagination to work
+                    $wp_query = $query;
+                    ?>
+                    <ul class="pagination">
+                        <?php foreach(custom_paginated_links($wp_query) as $link) { ?>
+                            <li class="page-item <?php if($link->isCurrent) { ?>active<?php } ?>">
+                                <?php if($link->isCurrent) { ?>
+                                    <a href="#" class="page-link"><?php _e($link->page) ?></a>
+                                <?php } else { ?>
+                                    <a href="<?php esc_attr_e( $link->url ) ?>" class="page-link">
+                                        <?php _e( $link->page ) ?>
+                                    </a>
+                                <?php } ?>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                    <?php
+                    $wp_query = $orig_query; // fix for pagination to work
+                    ?>
+                </nav>
+            <?php } ?>
+        </div>
+    </section>
+</main>
 
 <?php get_footer(); ?>

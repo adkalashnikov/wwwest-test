@@ -1,10 +1,9 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header pt-5">
+<article id="post-<?php the_ID(); ?>" <?php post_class('default-page'); ?>>
+	<header class="entry-header">
         <div class="container">
-            <div class="row justify-content-center  pt-5">
-                <div class="col col-md-8 pt-5 pb-5">
+            <div class="row justify-content-center">
+                <div class="col col-md-8 pb-5">
                     <?php the_title( '<h1 class="entry-title text-uppercase font-weight-bold mb-3">', '</h1>' ); ?>
-
                 </div>
             </div>
         </div>

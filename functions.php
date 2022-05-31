@@ -116,6 +116,15 @@ function theme_scripts() {
         wp_enqueue_script( 'js-blog' );
         wp_enqueue_style( 'css-blog' );
     }
+
+    // Archive page
+    wp_register_style( 'css-archive', $uri . '/dist/css/archive.css', array('theme-main-style'), null, 'all' );
+    wp_register_script( 'js-archive', $uri . '/dist/js/archive.js', array('jquery', 'theme-script'), null, true );
+
+    if ( is_archive() ) {
+        wp_enqueue_script( 'js-archive' );
+        wp_enqueue_style( 'css-archive' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
