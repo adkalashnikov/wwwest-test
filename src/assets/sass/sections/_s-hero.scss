@@ -7,6 +7,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: #f38181;
     transition: background-image .2s 1s;
 
     @include min-w($screen-md) {
