@@ -24,7 +24,7 @@
                 <div class="modal-body">
                     <form class="s-form" action="<?php echo home_url( '/' ); ?>">
                         <div class="form-group row align-items-center">
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8">
                                 <input class="form-control m-0" type="search" name="s" placeholder="<?php _e('Search the site', 'theme'); ?>">
                             </div>
 
