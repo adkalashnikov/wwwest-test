@@ -39,7 +39,7 @@ wp_reset_postdata();
 
 <?php get_header(); ?>
 
-<main id="main" class="page-main" role="main">
+<main id="main" class="page-main" >
     <section class="default-page">
         <div class="container">
             <div class="default-page__top">

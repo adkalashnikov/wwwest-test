@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" class="site-main default-page" role="main">
+<main id="main" class="site-main default-page" >
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-md-8 mt-5 mb-5">

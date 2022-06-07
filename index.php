@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main id="main" class="page-main" role="main">
+	<main id="main" class="page-main" >
         <div class="page-container">
             <?php if ( have_posts() ) : ?>
 

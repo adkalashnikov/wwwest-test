@@ -5,7 +5,7 @@
 ?>
 
 <?php get_header(); ?>
-	<main id="main" class="page-main" role="main">
+	<main id="main" class="page-main" >
         <?php
         $args = [
             'prefix' => 'hp_slider_', //REQUIRED VALUE

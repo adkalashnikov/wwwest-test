@@ -21,7 +21,7 @@ if (is_category() || is_tax()) {
 
 <?php get_header(); ?>
 
-<main id="main" class="page-main" role="main">
+<main id="main" class="page-main" >
     <section class="default-page">
         <div class="container">
             <div class="default-page__top">
